@@ -11,7 +11,7 @@ all: plugin
 
 plugin: defer_simple.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -I. -c defer_simple.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -Wl,-soname,defer_simple.so -o defer_simple.so defer_simple.o
+	$(CC) $(CFLAGS) $(LDFLAGS) -Wl,-install_name,defer_simple.so -o defer_simple.so defer_simple.o
 
 install: plugin
 	mkdir -p $(DESTDIR)$(PREFIX)/lib/openvpn/plugins/
