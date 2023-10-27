@@ -4,6 +4,8 @@ LDFLAGS	:= -fPIC -shared
 INSTALL	:= install
 DESTDIR	:= /
 PREFIX	:= /usr
+VENV    := venv
+
 
 all: plugin
 
@@ -24,3 +26,10 @@ clean:
 	rm -f *.so
 	rm -f *.pyc
 	rm -rf __pycache__
+	rm -rf $(VENV)
+
+
+py:
+	virtualenv $(VENV)
+	$(VENV)/bin/pip install --upgrade pip pytest
+	$(VENV)/bin/pip install -r requirements.txt

@@ -5,3 +5,4 @@ venv/
 cover/
 .coverage
 okta_openvpn.ini
+*.o
