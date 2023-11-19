@@ -1,3 +1,6 @@
+# NOTE:
+I begain working on this as my company's VPN has instructions though OpenVPN which uses Okta and 2 factor auth. By default, we are asked to enter our Okta password and then the Okta IOS app sends a push and we can confirm that we're trying to connect. I base my workflow around 1Password and was hoping I could use that to manage the 2fa and pw. I learned there's a better way! When OpenVPN asks you for a password, enter `okta_password,okta_2fa_code` no space, just a comma. It would be even better to have 1Password auto complete, but at least this simlifies matters a bunch! I stopped working on this because I had a workaround. 
+
 # Introduction
 
 This is a plugin for OpenVPN (Community Edition) that authenticates users directly against Okta, with support for MFA.
